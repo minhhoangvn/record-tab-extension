@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "disableSharing": {
+      "title": "Disable Sharing.",
+      "description": "Disallow sharing on Youtube or Drive if set to true.",
+      "type": "boolean"
+    },
+    "disableSaveToDisk": {
+      "title": "Disallow Save to Disk.",
+      "description": "Disallow saving recordings to disk if set to true.",
+      "type": "boolean"
+    },
+    "options": {
+      "type": "object",
+      "title": "Override User Options",
+      "properties": {
+        "driveSync": {
+          "title": "Store Recordings on Google Drive.",
+          "description": "Always store recordings on Google Drive if set to true.",
+          "type": "boolean"
+        },
+        "enableDiskSpaceWatcher": {
+          "title": "Pause on low Disk space.",
+          "description": "Avoid using up all disk space. Disable this on shared ChromeOS devices to allow automatic space eviction to kick in.",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

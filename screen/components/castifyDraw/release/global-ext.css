@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 100;
+  src: local('RobotoDraft Thin'), local('RobotoDraft-Thin'), url('chrome-extension://__MSG_@@extension_id__/components/castifyDraw/release/roboto/RobotoDraft-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 300;
+  src: local('RobotoDraft Light'), local('RobotoDraft-Light'), url('chrome-extension://__MSG_@@extension_id__/components/castifyDraw/release/roboto/RobotoDraft-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoDraft'), local('RobotoDraft-Regular'), url('chrome-extension://__MSG_@@extension_id__/components/castifyDraw/release/roboto/RobotoDraft-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoDraft Medium'), local('RobotoDraft-Medium'), url('chrome-extension://__MSG_@@extension_id__/components/castifyDraw/release/roboto/RobotoDraft-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 700;
+  src: local('RobotoDraft Bold'), local('RobotoDraft-Bold'), url('chrome-extension://__MSG_@@extension_id__/components/castifyDraw/release/roboto/RobotoDraft-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 900;
+  src: local('RobotoDraft Black'), local('RobotoDraft-Black'), url('chrome-extension://__MSG_@@extension_id__/components/castifyDraw/release/roboto/RobotoDraft-Black.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: italic;
+  font-weight: 400;
+  src: local('RobotoDraft Italic'), local('RobotoDraft-Italic'), url('chrome-extension://__MSG_@@extension_id__/components/castifyDraw/release/roboto/RobotoDraft-Italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: italic;
+  font-weight: 700;
+  src: local('RobotoDraft Bold Italic'), local('RobotoDraft-BoldItalic'), url('chrome-extension://__MSG_@@extension_id__/components/castifyDraw/release/roboto/RobotoDraft-BoldItalic.woff2') format('woff2');
+}
+

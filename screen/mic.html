@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grant Access to Microphone</title>
+  <link rel="stylesheet" href="gen/main.css">
+</head>
+<body data-ng-app="castifyExt.MicApp" data-ng-csp class="ng-cloak" layout="row"
+      layout-align="center center">
+<div data-ng-controller="MicStreamCtrl" class="micstream" layout-padding layout="row">
+  <div class="head-icon" layout="row">
+    <md-icon>perm_camera_mic</md-icon>
+  </div>
+  <div flex>
+    <h1 class="md-display-1">Microphone/Camera Access</h1>
+
+    <div data-ng-switch data-on="state" class="micstate" data-ng-class="state">
+      <p data-ng-switch-when="init">
+        Screencastify needs access to your microphone and camera to record audio or to embed
+        a camera feed.
+        Please grant access to start recording.
+      </p>
+
+      <p data-ng-switch-when="error">
+        Screencastify failed to access to your microphone or camera.
+        Please change the media setting in the location bar.
+        Then close this tab and try again. <br><br>
+        <img src="images/help/micaccess.gif" alt="">
+      </p>
+
+      <p data-ng-switch-default>
+        You have successfully set up microphone and camera access. You can now close this page and
+        start recording.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+
+<script src="babel-polyfill.js"></script>
+<script src="components/mic.html.js"></script>
+</body>
+</html>

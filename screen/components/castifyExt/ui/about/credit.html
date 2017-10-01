@@ -1,0 +1,10 @@
+<div class="credit">
+    <span class="title">{{title}}</span>
+    <a class="show" ng-click="showLicense = !showLicense">
+        <span ng-hide="showLicense">show license</span>
+        <span ng-show="showLicense">hide license</span>
+    </a>
+    <span class="homepage"><a href="{{url}}">homepage</a></span>
+    <div class="license" ng-show="showLicense" ng-transclude>
+    </div>
+</div>

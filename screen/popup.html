@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="popup">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <link rel="stylesheet" href="gen/main.css">
+  </head>
+
+    <body data-ng-app="castifyExt.PopupApp" data-ng-csp class="ng-cloak popup">
+
+    <cf-sidenav popup-mode is-open="isAppMenuOpen"></cf-sidenav>
+    <ui-view class="view" ng-hide="isAppMenuOpen"></ui-view>
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/chrome-platform-analytics/google-analytics-bundle.js"></script>
+
+    <script src="babel-polyfill.js"></script>
+    <script src="components/templates.js"></script>
+    <script src="components/popup.html.js"></script>
+  </body>
+</html>

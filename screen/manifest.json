@@ -1,0 +1,91 @@
+{
+   "api_console_project_id": "242262968495",
+   "background": {
+      "persistent": false,
+      "scripts": [ "babel-polyfill.js", "bower_components/traceur-runtime/traceur-runtime.min.js", "bower_components/angular/angular.min.js", "bower_components/chrome-platform-analytics/google-analytics-bundle.js", "components/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon19.png",
+         "38": "images/icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": ""
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "suggested_key": {
+            "chromeos": "Ctrl+Shift+S",
+            "default": "Alt+Shift+S"
+         }
+      },
+      "focus-tab": {
+         "description": "Change Recording Focus to Current Tab",
+         "suggested_key": {
+            "default": "Alt+Shift+F"
+         }
+      },
+      "toggle-pause": {
+         "description": "Pause/Resume Recording",
+         "suggested_key": {
+            "default": "Alt+Shift+P"
+         }
+      },
+      "toggle-recording": {
+         "description": "Start/Stop Recording",
+         "suggested_key": {
+            "default": "Alt+Shift+R"
+         }
+      }
+   },
+   "container": "GOOGLE_DRIVE",
+   "content_security_policy": "script-src 'self' http://localhost:9008 https://www.google-analytics.com https://apis.google.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_application_description__",
+   "externally_connectable": {
+      "matches": [ "https://*.screencastify.com/*", "https://screencastify-staging.appspot.com/*", "http://localhost:9000/*" ]
+   },
+   "gdrive_mime_types": {
+      "http://drive.google.com/intents/opendrivedoc": [ {
+         "disposition": "window",
+         "href": "https://www.screencastify.com/launch",
+         "title": "Open",
+         "type": [  ]
+      } ]
+   },
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy6Nhr6FKbqgayQ3nFFiJ758dD1vOsZAfoZFm2A1LetDkf3rEGxTdNmrBaSH9ghfnvwWvIJhwxllg56gsVUbx3umdEpu/iUimezaBHQX1yoAIXFBL3+ojLVTrZJo8U0u/qS2+V9FSYadqDEaBE2fCszAaX9IA0oWmh6w2Q7otIfC37DYfeTpuykG5cJh56Sc10L9PapgOIEg5q908BsQ/SXcXHBbKl0rpUfYyYFzs1zqd6y6ta3dNE4YMwpMK/pGQ9R7lQmuNfGH+uFOIbgbEO8s4HdoVPF0at1H0V8hOxIevnRgbDfo+ekDdwrgRItkXCtKQz+XWYmC6eJEbB7PAywIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "48",
+   "name": "Screencastify - Screen Video Recorder",
+   "oauth2": {
+      "client_id": "242262968495-vam8ele6sc3j5q90mcn3sd29l2bq5m1s.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/plus.me", "email", "https://www.googleapis.com/auth/drive.file" ]
+   },
+   "offline_enabled": true,
+   "optional_permissions": [ "activeTab", "tabCapture", "\u003Call_urls>", "webNavigation" ],
+   "options_page": "app.html#options",
+   "permissions": [ "storage", "alarms", "identity", "notifications", "unlimitedStorage", "desktopCapture", "system.cpu", "system.memory" ],
+   "platforms": [ {
+      "nacl_arch": "arm",
+      "sub_package_path": "_platform_specific/arm/"
+   }, {
+      "nacl_arch": "x86-32",
+      "sub_package_path": "_platform_specific/x86-32/"
+   }, {
+      "nacl_arch": "x86-64",
+      "sub_package_path": "_platform_specific/x86-64/"
+   } ],
+   "short_name": "Screencastify",
+   "storage": {
+      "managed_schema": "managed_schema.json"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.29.2.37",
+   "version_name": "1.29.2-1e0d9cd",
+   "web_accessible_resources": [ "components/castifyDraw/release/roboto/*.woff2", "components/castifyDraw/release/cam-frame.html", "connect.html" ]
+}

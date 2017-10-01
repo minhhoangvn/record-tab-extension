@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 100;
+  src: local('RobotoDraft Thin'), local('RobotoDraft-Thin'), url('roboto/RobotoDraft-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 300;
+  src: local('RobotoDraft Light'), local('RobotoDraft-Light'), url('roboto/RobotoDraft-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoDraft'), local('RobotoDraft-Regular'), url('roboto/RobotoDraft-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoDraft Medium'), local('RobotoDraft-Medium'), url('roboto/RobotoDraft-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 700;
+  src: local('RobotoDraft Bold'), local('RobotoDraft-Bold'), url('roboto/RobotoDraft-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 900;
+  src: local('RobotoDraft Black'), local('RobotoDraft-Black'), url('roboto/RobotoDraft-Black.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: italic;
+  font-weight: 400;
+  src: local('RobotoDraft Italic'), local('RobotoDraft-Italic'), url('roboto/RobotoDraft-Italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: italic;
+  font-weight: 700;
+  src: local('RobotoDraft Bold Italic'), local('RobotoDraft-BoldItalic'), url('roboto/RobotoDraft-BoldItalic.woff2') format('woff2');
+}
+
