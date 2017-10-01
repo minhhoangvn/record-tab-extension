@@ -11,6 +11,7 @@
     <div class="row">
       <h1>MH Extension For Fun</h1>
     </div>
+    <br/>
     <div class="row">
       <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-secondary" id="btnStart">Start Record</button>
@@ -18,10 +19,37 @@
         <button type="button" class="btn btn-secondary" id="btnSave">Save Record</button>
       </div>
     </div>
+    <br/>
+    <div class="row">
+      <div class="input-group">
+        <span class="input-group-btn">
+        <button id="btnSending" class="btn btn-secondary" type="button">Go!</button>
+      </span>
+        <input id="inputCommand" type="text" class="form-control" placeholder="Send message to background process..." aria-label="Command to background...">
+      </div>
+    </div>
+    <br/>
+    <form>
+      <div class="form-group">
+        <label for="popupMessage">popup action</label>
+        <input readonly class="form-control" id="popupMessage">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="messageSending">extension sending command</label>
+        <input readonly class="form-control" id="messageSending">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="messageReceiving">extension receiving message</label>
+        <input readonly class="form-control" id="messageReceiving">
+      </div>
+    </form>
   </div>
 </body>
 <script type="text/javascript" src="assets/js/jquery-3.2.1.slim.min.js"></script>
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="popup.js"></script>
+
 </html>
