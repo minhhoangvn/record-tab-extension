@@ -45,18 +45,5 @@
     "bookmarks",
     "*://*/*"
   ],
-  "options_page": "options.html",
-  "commands": {
-    "open-google": {
-      "description": "Open a tab to google.com",
-      "suggested_key": {
-        "default": "Ctrl+Shift+L"
-      }
-    },
-    "_execute_browser_action": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+K"
-      }
-    }
-  }
+  "options_page": "options.html"
 }

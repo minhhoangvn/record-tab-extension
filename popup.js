@@ -5,9 +5,11 @@ window.onload = function () {
 class PopupAction {
     constructor() {
         this.clickHandler();     
+        this.listGiphyUrl = [];
     }
 
     clickHandler() {
+        const _this = this;
         const messageElement = $("#popupMessage");
         const sendingMessageElement = $("#messageSending");
         const messageReceivingElement = $("#messageReceiving");
@@ -29,15 +31,27 @@ class PopupAction {
             messageElement.val("Save button is click");
         })
 
-        btnSend.click(function () {
-            sendingMessageElement.val(txtInputCommand.val());
-            const iframeElement = $("#giphyFrame")[0];
+        btnSend.click(async function () {
+            let listGiphyUrl = [];
+            sendingMessageElement.val(txtInputCommand.val());            
             chrome.runtime.sendMessage({ data: txtInputCommand.val() }, function (response) {
-                messageReceivingElement.val(response.data);
+                _this.listGiphyUrl.push(response.data);
+                messageReceivingElement.val(response.data);                
+            });
+            _this.displayedGiphyCallback();
+        })
+    }
+
+    displayedGiphyCallback(){   
+        for(let giphy of this.listGiphyUrl)
+        {
+            setTimeout(function(){
+                const iframeElement = $("#giphyFrame")[0];
                 iframeElement.setAttribute("width", "200");
                 iframeElement.setAttribute("height", "250");
-                iframeElement.setAttribute("src", response.data);
-            });
-        })
+                iframeElement.setAttribute("src", giphy);
+            },3000)
+           
+        }
     }
 }
