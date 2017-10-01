@@ -4,7 +4,7 @@ window.onload = function () {
 
 class PopupAction {
     constructor() {
-        this.clickHandler();
+        this.clickHandler();     
     }
 
     clickHandler() {
@@ -31,14 +31,13 @@ class PopupAction {
 
         btnSend.click(function () {
             sendingMessageElement.val(txtInputCommand.val());
+            const iframeElement = $("#giphyFrame")[0];
             chrome.runtime.sendMessage({ data: txtInputCommand.val() }, function (response) {
                 messageReceivingElement.val(response.data);
-                console.log("Response message from background js", response.data);
+                iframeElement.setAttribute("width", "200");
+                iframeElement.setAttribute("height", "250");
+                iframeElement.setAttribute("src", response.data);
             });
         })
-    }
-
-    onMessageHandler() {
-
     }
 }
