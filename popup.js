@@ -1,11 +1,25 @@
 window.onload = function () {
-    new PopupAction();
+    const action = new PopupAction();
+    setInterval(function () {
+        action.displayedGiphyCallback();
+    }, 30000)
 }
 
 class PopupAction {
     constructor() {
-        this.clickHandler();     
+        this.clickHandler();
         this.listGiphyUrl = [];
+    }
+
+    addedItemToListGiphyUrl(item) {
+        if (this.listGiphyUrl.length > 10) {
+            this.listGiphyUrl.shift();
+        }
+        this.listGiphyUrl.push(item);
+    }
+
+    getListGiphyUrl() {
+        return this.listGiphyUrl;
     }
 
     clickHandler() {
@@ -33,25 +47,33 @@ class PopupAction {
 
         btnSend.click(async function () {
             let listGiphyUrl = [];
-            sendingMessageElement.val(txtInputCommand.val());            
+            sendingMessageElement.val(txtInputCommand.val());
             chrome.runtime.sendMessage({ data: txtInputCommand.val() }, function (response) {
-                _this.listGiphyUrl.push(response.data);
-                messageReceivingElement.val(response.data);                
+                _this.addedItemToListGiphyUrl(response.data);
+                messageReceivingElement.val(response.data);
             });
-            _this.displayedGiphyCallback();
         })
     }
 
-    displayedGiphyCallback(){   
-        for(let giphy of this.listGiphyUrl)
-        {
-            setTimeout(function(){
+    displayedGiphyCallback() {
+        let callbackFunctions = this.getArrayChangeGiphyImageFunction();
+        for (let i = 1; i < callbackFunctions.length; i++) {
+            setTimeout(function timer() {
+                callbackFunctions[i]();
+            }, i * 3000);
+        }
+    }
+
+    getArrayChangeGiphyImageFunction() {
+        let callbackFunctions = [];
+        for (let giphy of this.getListGiphyUrl()) {
+            callbackFunctions.push(() => {
                 const iframeElement = $("#giphyFrame")[0];
                 iframeElement.setAttribute("width", "200");
                 iframeElement.setAttribute("height", "250");
                 iframeElement.setAttribute("src", giphy);
-            },3000)
-           
+            });
         }
+        return callbackFunctions;
     }
 }

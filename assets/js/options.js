@@ -42,7 +42,7 @@ chrome.storage.sync.get(null, function (items) {
 document.getElementById('resolutions').onchange = function () {
     this.disabled = true;
 
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         resolutions: this.value
     }, function () {
         document.getElementById('resolutions').disabled = false;
@@ -61,7 +61,7 @@ document.getElementById('min_bandwidth').onblur = function () {
 
     this.disabled = true;
 
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         min_bandwidth: this.value
     }, function () {
         document.getElementById('min_bandwidth').disabled = false;
@@ -80,7 +80,7 @@ document.getElementById('max_bandwidth').onblur = function () {
 
     this.disabled = true;
 
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         max_bandwidth: this.value
     }, function () {
         document.getElementById('max_bandwidth').disabled = false;
@@ -90,7 +90,7 @@ document.getElementById('max_bandwidth').onblur = function () {
 document.getElementById('room_password').onblur = function () {
     this.disabled = true;
 
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         room_password: this.value
     }, function () {
         document.getElementById('room_password').disabled = false;
@@ -100,7 +100,7 @@ document.getElementById('room_password').onblur = function () {
 document.getElementById('room_id').onblur = function () {
     this.disabled = true;
 
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         room_id: this.value
     }, function () {
         document.getElementById('room_id').disabled = false;
@@ -109,7 +109,7 @@ document.getElementById('room_id').onblur = function () {
 
 document.getElementById('txtGiphyToken').onblur = function () {
     this.disabled = true;
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         apiToken: this.value
     }, function () {
         console.log("save api token");
